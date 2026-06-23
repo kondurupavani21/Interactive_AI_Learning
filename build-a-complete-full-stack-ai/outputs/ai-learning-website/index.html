@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Learning App - DSA Visualizer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="AI DSA Lab home">
+        <span class="brand-mark">AI</span>
+        <span>DSA Visualizer</span>
+      </a>
+      <nav>
+        <a href="#topics">Topics</a>
+        <a href="#visualizer">Visualizer</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#about">About</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" type="button">Dark</button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">AI-powered learning website</span>
+          <h1>Learn data structures by seeing how they move.</h1>
+          <p>
+            A modern educational website for stacks, queues, linked lists, sorting algorithms,
+            and binary trees with interactive visual demos and quiz practice.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#topics">Start Learning</a>
+            <a class="secondary-button" href="#visualizer">Try Visualizer</a>
+          </div>
+        </div>
+        <div class="hero-panel" aria-label="Animated learning progress preview">
+          <div class="floating-card card-one">
+            <strong>Stack</strong>
+            <span>Push → Pop → Peek</span>
+          </div>
+          <div class="floating-card card-two">
+            <strong>Queue</strong>
+            <span>FIFO operations</span>
+          </div>
+          <div class="bars">
+            <span style="height: 42%"></span>
+            <span style="height: 70%"></span>
+            <span style="height: 54%"></span>
+            <span style="height: 88%"></span>
+            <span style="height: 64%"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-heading" id="topics">
+        <div>
+          <span class="eyebrow">DSA modules</span>
+          <h2>Choose a topic</h2>
+        </div>
+        <label class="search-box">
+          <span>Search</span>
+          <input id="topicSearch" type="search" placeholder="Stack, queue, sorting..." />
+        </label>
+      </section>
+
+      <section class="topic-grid" id="topicGrid">
+        <article class="topic-card" data-topic="stack lifo push pop recursion">
+          <span class="topic-tag green">Beginner</span>
+          <h3>Stack</h3>
+          <p>Understand LIFO behavior with push, pop, peek, and call-stack examples.</p>
+        </article>
+        <article class="topic-card" data-topic="queue fifo enqueue dequeue buffer">
+          <span class="topic-tag blue">Beginner</span>
+          <h3>Queue</h3>
+          <p>Learn FIFO processing through enqueue, dequeue, and scheduling examples.</p>
+        </article>
+        <article class="topic-card" data-topic="linked list node pointer head insert delete">
+          <span class="topic-tag amber">Intermediate</span>
+          <h3>Linked List</h3>
+          <p>See how nodes connect through pointers without contiguous memory.</p>
+        </article>
+        <article class="topic-card" data-topic="sorting comparison swap selection bubble">
+          <span class="topic-tag rose">Intermediate</span>
+          <h3>Sorting Algorithms</h3>
+          <p>Animate comparisons and swaps while building sorting intuition.</p>
+        </article>
+        <article class="topic-card" data-topic="binary tree root traversal dfs bfs child">
+          <span class="topic-tag violet">Advanced</span>
+          <h3>Binary Tree</h3>
+          <p>Explore roots, children, hierarchy, and traversal orders.</p>
+        </article>
+      </section>
+
+      <section class="visualizer-section" id="visualizer">
+        <div class="visualizer-copy">
+          <span class="eyebrow">Interactive visualizer</span>
+          <h2>Try stack operations</h2>
+          <p>
+            This website version includes a lightweight interactive stack demo. The full app version
+            in the workspace includes React Three Fiber scenes for stack, queue, sorting, and trees.
+          </p>
+          <div class="control-row">
+            <button class="primary-button" id="pushButton" type="button">Push</button>
+            <button class="secondary-button" id="popButton" type="button">Pop</button>
+          </div>
+        </div>
+        <div class="stack-stage" aria-live="polite">
+          <div class="stack-label">Top</div>
+          <div class="stack" id="stack"></div>
+        </div>
+      </section>
+
+      <section class="quiz-section" id="quiz">
+        <div>
+          <span class="eyebrow">Quick quiz</span>
+          <h2>Check your intuition</h2>
+        </div>
+        <div class="quiz-card">
+          <h3 id="quizQuestion">Which data structure follows LIFO?</h3>
+          <div class="quiz-options" id="quizOptions"></div>
+          <p id="quizFeedback" class="quiz-feedback"></p>
+        </div>
+      </section>
+
+      <section class="about-section" id="about">
+        <span class="eyebrow">Website version</span>
+        <h2>Simple, polished, and ready to host.</h2>
+        <p>
+          This is a standalone website version for presenting the AI Learning App concept.
+          You can host it on Vercel, Netlify, GitHub Pages, or any static web host.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <span>AI DSA Visualizer</span>
+      <span>Built for interactive learning</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
